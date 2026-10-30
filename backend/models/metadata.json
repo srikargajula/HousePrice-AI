@@ -1,0 +1,1086 @@
+{
+  "project_name": "HousePrice AI",
+  "best_model_name": "Gradient Boosting Regressor",
+  "dataset_name": "Boston Housing Dataset (Kaggle/Census)",
+  "dataset_source": "https://www.kaggle.com/datasets/fedesoriano/the-boston-houseprice-data",
+  "dataset_size": 506,
+  "train_size": 404,
+  "test_size": 102,
+  "feature_count": 13,
+  "features": [
+    "crim",
+    "zn",
+    "indus",
+    "chas",
+    "nox",
+    "rm",
+    "age",
+    "dis",
+    "rad",
+    "tax",
+    "ptratio",
+    "b",
+    "lstat"
+  ],
+  "target": {
+    "name": "medv",
+    "label": "Median Home Value",
+    "unit": "$1,000 USD",
+    "description": "Median value of owner-occupied homes in $1000's (1970s census era benchmark)",
+    "multiplier": 1000.0,
+    "currency": "USD"
+  },
+  "models_comparison": {
+    "Linear Regression": {
+      "name": "Linear Regression",
+      "test_metrics": {
+        "r2_score": 0.6688,
+        "mae": 3.1891,
+        "rmse": 4.9286,
+        "mae_dollars": 3189.09,
+        "rmse_dollars": 4928.6
+      },
+      "train_metrics": {
+        "r2_score": 0.7509,
+        "mae": 3.3148,
+        "rmse": 4.652
+      }
+    },
+    "Random Forest Regressor": {
+      "name": "Random Forest Regressor",
+      "test_metrics": {
+        "r2_score": 0.8818,
+        "mae": 2.0333,
+        "rmse": 2.9436,
+        "mae_dollars": 2033.32,
+        "rmse_dollars": 2943.64
+      },
+      "train_metrics": {
+        "r2_score": 0.9769,
+        "mae": 0.9402,
+        "rmse": 1.4178
+      }
+    },
+    "Gradient Boosting Regressor": {
+      "name": "Gradient Boosting Regressor",
+      "test_metrics": {
+        "r2_score": 0.914,
+        "mae": 1.911,
+        "rmse": 2.5107,
+        "mae_dollars": 1911.02,
+        "rmse_dollars": 2510.68
+      },
+      "train_metrics": {
+        "r2_score": 0.9939,
+        "mae": 0.5733,
+        "rmse": 0.7261
+      }
+    }
+  },
+  "feature_importances": [
+    {
+      "feature": "rm",
+      "label": "Average Rooms Per Dwelling",
+      "importance": 0.4401,
+      "importance_pct": 44.01
+    },
+    {
+      "feature": "lstat",
+      "label": "Lower Status Population",
+      "importance": 0.3635,
+      "importance_pct": 36.35
+    },
+    {
+      "feature": "dis",
+      "label": "Distance to Employment Centers",
+      "importance": 0.0736,
+      "importance_pct": 7.36
+    },
+    {
+      "feature": "crim",
+      "label": "Per Capita Crime Rate",
+      "importance": 0.0294,
+      "importance_pct": 2.94
+    },
+    {
+      "feature": "ptratio",
+      "label": "Pupil-Teacher Ratio",
+      "importance": 0.019,
+      "importance_pct": 1.9
+    },
+    {
+      "feature": "b",
+      "label": "B Index (Historical Metric)",
+      "importance": 0.0186,
+      "importance_pct": 1.86
+    },
+    {
+      "feature": "nox",
+      "label": "Nitric Oxide Concentration",
+      "importance": 0.0185,
+      "importance_pct": 1.85
+    },
+    {
+      "feature": "tax",
+      "label": "Property Tax Rate",
+      "importance": 0.0174,
+      "importance_pct": 1.74
+    },
+    {
+      "feature": "age",
+      "label": "Built Prior to 1940",
+      "importance": 0.0137,
+      "importance_pct": 1.37
+    },
+    {
+      "feature": "indus",
+      "label": "Non-Retail Business Acres",
+      "importance": 0.0042,
+      "importance_pct": 0.42
+    },
+    {
+      "feature": "rad",
+      "label": "Highway Accessibility Index",
+      "importance": 0.0015,
+      "importance_pct": 0.15
+    },
+    {
+      "feature": "zn",
+      "label": "Zoned Land (>25k sq ft)",
+      "importance": 0.0004,
+      "importance_pct": 0.04
+    },
+    {
+      "feature": "chas",
+      "label": "Charles River Tract",
+      "importance": 0.0003,
+      "importance_pct": 0.03
+    }
+  ],
+  "test_actual_vs_predicted": [
+    {
+      "id": 1,
+      "actual": 23.6,
+      "predicted": 23.68,
+      "actual_dollars": 23600.0,
+      "predicted_dollars": 23679.11,
+      "residual": -0.08,
+      "abs_error": 0.08
+    },
+    {
+      "id": 2,
+      "actual": 32.4,
+      "predicted": 30.48,
+      "actual_dollars": 32400.0,
+      "predicted_dollars": 30482.19,
+      "residual": 1.92,
+      "abs_error": 1.92
+    },
+    {
+      "id": 3,
+      "actual": 13.6,
+      "predicted": 16.72,
+      "actual_dollars": 13600.0,
+      "predicted_dollars": 16718.86,
+      "residual": -3.12,
+      "abs_error": 3.12
+    },
+    {
+      "id": 4,
+      "actual": 22.8,
+      "predicted": 24.0,
+      "actual_dollars": 22800.0,
+      "predicted_dollars": 24003.57,
+      "residual": -1.2,
+      "abs_error": 1.2
+    },
+    {
+      "id": 5,
+      "actual": 16.1,
+      "predicted": 17.16,
+      "actual_dollars": 16100.0,
+      "predicted_dollars": 17160.13,
+      "residual": -1.06,
+      "abs_error": 1.06
+    },
+    {
+      "id": 6,
+      "actual": 20.0,
+      "predicted": 22.0,
+      "actual_dollars": 20000.0,
+      "predicted_dollars": 21999.73,
+      "residual": -2.0,
+      "abs_error": 2.0
+    },
+    {
+      "id": 7,
+      "actual": 17.8,
+      "predicted": 18.76,
+      "actual_dollars": 17800.0,
+      "predicted_dollars": 18755.06,
+      "residual": -0.96,
+      "abs_error": 0.96
+    },
+    {
+      "id": 8,
+      "actual": 14.0,
+      "predicted": 14.95,
+      "actual_dollars": 14000.0,
+      "predicted_dollars": 14947.8,
+      "residual": -0.95,
+      "abs_error": 0.95
+    },
+    {
+      "id": 9,
+      "actual": 19.6,
+      "predicted": 20.93,
+      "actual_dollars": 19600.0,
+      "predicted_dollars": 20932.55,
+      "residual": -1.33,
+      "abs_error": 1.33
+    },
+    {
+      "id": 10,
+      "actual": 16.8,
+      "predicted": 21.01,
+      "actual_dollars": 16800.0,
+      "predicted_dollars": 21010.63,
+      "residual": -4.21,
+      "abs_error": 4.21
+    },
+    {
+      "id": 11,
+      "actual": 21.5,
+      "predicted": 20.39,
+      "actual_dollars": 21500.0,
+      "predicted_dollars": 20385.09,
+      "residual": 1.11,
+      "abs_error": 1.11
+    },
+    {
+      "id": 12,
+      "actual": 18.9,
+      "predicted": 17.88,
+      "actual_dollars": 18900.0,
+      "predicted_dollars": 17884.79,
+      "residual": 1.02,
+      "abs_error": 1.02
+    },
+    {
+      "id": 13,
+      "actual": 7.0,
+      "predicted": 7.76,
+      "actual_dollars": 7000.0,
+      "predicted_dollars": 7757.65,
+      "residual": -0.76,
+      "abs_error": 0.76
+    },
+    {
+      "id": 14,
+      "actual": 21.2,
+      "predicted": 21.61,
+      "actual_dollars": 21200.0,
+      "predicted_dollars": 21614.7,
+      "residual": -0.41,
+      "abs_error": 0.41
+    },
+    {
+      "id": 15,
+      "actual": 18.5,
+      "predicted": 19.79,
+      "actual_dollars": 18500.0,
+      "predicted_dollars": 19788.8,
+      "residual": -1.29,
+      "abs_error": 1.29
+    },
+    {
+      "id": 16,
+      "actual": 29.8,
+      "predicted": 23.6,
+      "actual_dollars": 29800.0,
+      "predicted_dollars": 23604.88,
+      "residual": 6.2,
+      "abs_error": 6.2
+    },
+    {
+      "id": 17,
+      "actual": 18.8,
+      "predicted": 20.12,
+      "actual_dollars": 18800.0,
+      "predicted_dollars": 20124.94,
+      "residual": -1.32,
+      "abs_error": 1.32
+    },
+    {
+      "id": 18,
+      "actual": 10.2,
+      "predicted": 9.14,
+      "actual_dollars": 10200.0,
+      "predicted_dollars": 9135.32,
+      "residual": 1.06,
+      "abs_error": 1.06
+    },
+    {
+      "id": 19,
+      "actual": 50.0,
+      "predicted": 45.59,
+      "actual_dollars": 50000.0,
+      "predicted_dollars": 45594.17,
+      "residual": 4.41,
+      "abs_error": 4.41
+    },
+    {
+      "id": 20,
+      "actual": 14.1,
+      "predicted": 15.71,
+      "actual_dollars": 14100.0,
+      "predicted_dollars": 15713.89,
+      "residual": -1.61,
+      "abs_error": 1.61
+    },
+    {
+      "id": 21,
+      "actual": 25.2,
+      "predicted": 24.58,
+      "actual_dollars": 25200.0,
+      "predicted_dollars": 24583.79,
+      "residual": 0.62,
+      "abs_error": 0.62
+    },
+    {
+      "id": 22,
+      "actual": 29.1,
+      "predicted": 25.36,
+      "actual_dollars": 29100.0,
+      "predicted_dollars": 25357.29,
+      "residual": 3.74,
+      "abs_error": 3.74
+    },
+    {
+      "id": 23,
+      "actual": 12.7,
+      "predicted": 12.96,
+      "actual_dollars": 12700.0,
+      "predicted_dollars": 12964.02,
+      "residual": -0.26,
+      "abs_error": 0.26
+    },
+    {
+      "id": 24,
+      "actual": 22.4,
+      "predicted": 21.99,
+      "actual_dollars": 22400.0,
+      "predicted_dollars": 21989.13,
+      "residual": 0.41,
+      "abs_error": 0.41
+    },
+    {
+      "id": 25,
+      "actual": 14.2,
+      "predicted": 14.84,
+      "actual_dollars": 14200.0,
+      "predicted_dollars": 14841.2,
+      "residual": -0.64,
+      "abs_error": 0.64
+    },
+    {
+      "id": 26,
+      "actual": 13.8,
+      "predicted": 16.24,
+      "actual_dollars": 13800.0,
+      "predicted_dollars": 16236.06,
+      "residual": -2.44,
+      "abs_error": 2.44
+    },
+    {
+      "id": 27,
+      "actual": 20.3,
+      "predicted": 22.07,
+      "actual_dollars": 20300.0,
+      "predicted_dollars": 22067.77,
+      "residual": -1.77,
+      "abs_error": 1.77
+    },
+    {
+      "id": 28,
+      "actual": 14.9,
+      "predicted": 13.19,
+      "actual_dollars": 14900.0,
+      "predicted_dollars": 13189.34,
+      "residual": 1.71,
+      "abs_error": 1.71
+    },
+    {
+      "id": 29,
+      "actual": 21.7,
+      "predicted": 20.0,
+      "actual_dollars": 21700.0,
+      "predicted_dollars": 20000.62,
+      "residual": 1.7,
+      "abs_error": 1.7
+    },
+    {
+      "id": 30,
+      "actual": 18.3,
+      "predicted": 21.12,
+      "actual_dollars": 18300.0,
+      "predicted_dollars": 21122.58,
+      "residual": -2.82,
+      "abs_error": 2.82
+    },
+    {
+      "id": 31,
+      "actual": 23.1,
+      "predicted": 19.94,
+      "actual_dollars": 23100.0,
+      "predicted_dollars": 19938.06,
+      "residual": 3.16,
+      "abs_error": 3.16
+    },
+    {
+      "id": 32,
+      "actual": 23.8,
+      "predicted": 23.18,
+      "actual_dollars": 23800.0,
+      "predicted_dollars": 23181.88,
+      "residual": 0.62,
+      "abs_error": 0.62
+    },
+    {
+      "id": 33,
+      "actual": 15.0,
+      "predicted": 24.14,
+      "actual_dollars": 15000.0,
+      "predicted_dollars": 24138.47,
+      "residual": -9.14,
+      "abs_error": 9.14
+    },
+    {
+      "id": 34,
+      "actual": 20.8,
+      "predicted": 20.74,
+      "actual_dollars": 20800.0,
+      "predicted_dollars": 20740.19,
+      "residual": 0.06,
+      "abs_error": 0.06
+    },
+    {
+      "id": 35,
+      "actual": 19.1,
+      "predicted": 14.7,
+      "actual_dollars": 19100.0,
+      "predicted_dollars": 14704.82,
+      "residual": 4.4,
+      "abs_error": 4.4
+    },
+    {
+      "id": 36,
+      "actual": 19.4,
+      "predicted": 15.94,
+      "actual_dollars": 19400.0,
+      "predicted_dollars": 15938.87,
+      "residual": 3.46,
+      "abs_error": 3.46
+    },
+    {
+      "id": 37,
+      "actual": 34.7,
+      "predicted": 33.67,
+      "actual_dollars": 34700.0,
+      "predicted_dollars": 33670.62,
+      "residual": 1.03,
+      "abs_error": 1.03
+    },
+    {
+      "id": 38,
+      "actual": 19.5,
+      "predicted": 19.45,
+      "actual_dollars": 19500.0,
+      "predicted_dollars": 19452.61,
+      "residual": 0.05,
+      "abs_error": 0.05
+    },
+    {
+      "id": 39,
+      "actual": 24.4,
+      "predicted": 21.99,
+      "actual_dollars": 24400.0,
+      "predicted_dollars": 21991.4,
+      "residual": 2.41,
+      "abs_error": 2.41
+    },
+    {
+      "id": 40,
+      "actual": 23.4,
+      "predicted": 23.72,
+      "actual_dollars": 23400.0,
+      "predicted_dollars": 23718.54,
+      "residual": -0.32,
+      "abs_error": 0.32
+    },
+    {
+      "id": 41,
+      "actual": 19.7,
+      "predicted": 18.14,
+      "actual_dollars": 19700.0,
+      "predicted_dollars": 18136.86,
+      "residual": 1.56,
+      "abs_error": 1.56
+    },
+    {
+      "id": 42,
+      "actual": 28.2,
+      "predicted": 29.53,
+      "actual_dollars": 28200.0,
+      "predicted_dollars": 29533.26,
+      "residual": -1.33,
+      "abs_error": 1.33
+    },
+    {
+      "id": 43,
+      "actual": 50.0,
+      "predicted": 44.06,
+      "actual_dollars": 50000.0,
+      "predicted_dollars": 44062.35,
+      "residual": 5.94,
+      "abs_error": 5.94
+    },
+    {
+      "id": 44,
+      "actual": 17.4,
+      "predicted": 19.79,
+      "actual_dollars": 17400.0,
+      "predicted_dollars": 19789.02,
+      "residual": -2.39,
+      "abs_error": 2.39
+    },
+    {
+      "id": 45,
+      "actual": 22.6,
+      "predicted": 22.83,
+      "actual_dollars": 22600.0,
+      "predicted_dollars": 22834.18,
+      "residual": -0.23,
+      "abs_error": 0.23
+    },
+    {
+      "id": 46,
+      "actual": 15.1,
+      "predicted": 14.64,
+      "actual_dollars": 15100.0,
+      "predicted_dollars": 14640.16,
+      "residual": 0.46,
+      "abs_error": 0.46
+    },
+    {
+      "id": 47,
+      "actual": 13.1,
+      "predicted": 15.29,
+      "actual_dollars": 13100.0,
+      "predicted_dollars": 15291.87,
+      "residual": -2.19,
+      "abs_error": 2.19
+    },
+    {
+      "id": 48,
+      "actual": 24.2,
+      "predicted": 23.75,
+      "actual_dollars": 24200.0,
+      "predicted_dollars": 23751.17,
+      "residual": 0.45,
+      "abs_error": 0.45
+    },
+    {
+      "id": 49,
+      "actual": 19.9,
+      "predicted": 17.74,
+      "actual_dollars": 19900.0,
+      "predicted_dollars": 17741.54,
+      "residual": 2.16,
+      "abs_error": 2.16
+    },
+    {
+      "id": 50,
+      "actual": 24.0,
+      "predicted": 27.81,
+      "actual_dollars": 24000.0,
+      "predicted_dollars": 27809.7,
+      "residual": -3.81,
+      "abs_error": 3.81
+    },
+    {
+      "id": 51,
+      "actual": 18.9,
+      "predicted": 20.54,
+      "actual_dollars": 18900.0,
+      "predicted_dollars": 20537.06,
+      "residual": -1.64,
+      "abs_error": 1.64
+    },
+    {
+      "id": 52,
+      "actual": 35.4,
+      "predicted": 34.73,
+      "actual_dollars": 35400.0,
+      "predicted_dollars": 34733.54,
+      "residual": 0.67,
+      "abs_error": 0.67
+    },
+    {
+      "id": 53,
+      "actual": 15.2,
+      "predicted": 16.08,
+      "actual_dollars": 15200.0,
+      "predicted_dollars": 16078.95,
+      "residual": -0.88,
+      "abs_error": 0.88
+    },
+    {
+      "id": 54,
+      "actual": 26.5,
+      "predicted": 24.82,
+      "actual_dollars": 26500.0,
+      "predicted_dollars": 24816.97,
+      "residual": 1.68,
+      "abs_error": 1.68
+    },
+    {
+      "id": 55,
+      "actual": 43.5,
+      "predicted": 47.78,
+      "actual_dollars": 43500.0,
+      "predicted_dollars": 47778.49,
+      "residual": -4.28,
+      "abs_error": 4.28
+    },
+    {
+      "id": 56,
+      "actual": 21.2,
+      "predicted": 21.7,
+      "actual_dollars": 21200.0,
+      "predicted_dollars": 21699.31,
+      "residual": -0.5,
+      "abs_error": 0.5
+    },
+    {
+      "id": 57,
+      "actual": 18.4,
+      "predicted": 15.73,
+      "actual_dollars": 18400.0,
+      "predicted_dollars": 15726.93,
+      "residual": 2.67,
+      "abs_error": 2.67
+    },
+    {
+      "id": 58,
+      "actual": 28.5,
+      "predicted": 32.18,
+      "actual_dollars": 28500.0,
+      "predicted_dollars": 32175.07,
+      "residual": -3.68,
+      "abs_error": 3.68
+    },
+    {
+      "id": 59,
+      "actual": 23.9,
+      "predicted": 21.89,
+      "actual_dollars": 23900.0,
+      "predicted_dollars": 21894.76,
+      "residual": 2.01,
+      "abs_error": 2.01
+    },
+    {
+      "id": 60,
+      "actual": 18.5,
+      "predicted": 17.7,
+      "actual_dollars": 18500.0,
+      "predicted_dollars": 17697.74,
+      "residual": 0.8,
+      "abs_error": 0.8
+    },
+    {
+      "id": 61,
+      "actual": 25.0,
+      "predicted": 23.58,
+      "actual_dollars": 25000.0,
+      "predicted_dollars": 23577.24,
+      "residual": 1.42,
+      "abs_error": 1.42
+    },
+    {
+      "id": 62,
+      "actual": 35.4,
+      "predicted": 34.99,
+      "actual_dollars": 35400.0,
+      "predicted_dollars": 34987.89,
+      "residual": 0.41,
+      "abs_error": 0.41
+    },
+    {
+      "id": 63,
+      "actual": 31.5,
+      "predicted": 30.98,
+      "actual_dollars": 31500.0,
+      "predicted_dollars": 30984.91,
+      "residual": 0.52,
+      "abs_error": 0.52
+    },
+    {
+      "id": 64,
+      "actual": 20.2,
+      "predicted": 19.84,
+      "actual_dollars": 20200.0,
+      "predicted_dollars": 19835.82,
+      "residual": 0.36,
+      "abs_error": 0.36
+    },
+    {
+      "id": 65,
+      "actual": 24.1,
+      "predicted": 26.12,
+      "actual_dollars": 24100.0,
+      "predicted_dollars": 26116.18,
+      "residual": -2.02,
+      "abs_error": 2.02
+    },
+    {
+      "id": 66,
+      "actual": 20.0,
+      "predicted": 16.95,
+      "actual_dollars": 20000.0,
+      "predicted_dollars": 16946.96,
+      "residual": 3.05,
+      "abs_error": 3.05
+    },
+    {
+      "id": 67,
+      "actual": 13.1,
+      "predicted": 14.63,
+      "actual_dollars": 13100.0,
+      "predicted_dollars": 14626.54,
+      "residual": -1.53,
+      "abs_error": 1.53
+    },
+    {
+      "id": 68,
+      "actual": 24.8,
+      "predicted": 23.22,
+      "actual_dollars": 24800.0,
+      "predicted_dollars": 23222.42,
+      "residual": 1.58,
+      "abs_error": 1.58
+    },
+    {
+      "id": 69,
+      "actual": 30.8,
+      "predicted": 28.55,
+      "actual_dollars": 30800.0,
+      "predicted_dollars": 28554.24,
+      "residual": 2.25,
+      "abs_error": 2.25
+    },
+    {
+      "id": 70,
+      "actual": 12.7,
+      "predicted": 15.45,
+      "actual_dollars": 12700.0,
+      "predicted_dollars": 15448.95,
+      "residual": -2.75,
+      "abs_error": 2.75
+    },
+    {
+      "id": 71,
+      "actual": 20.0,
+      "predicted": 20.6,
+      "actual_dollars": 20000.0,
+      "predicted_dollars": 20600.4,
+      "residual": -0.6,
+      "abs_error": 0.6
+    },
+    {
+      "id": 72,
+      "actual": 23.7,
+      "predicted": 24.63,
+      "actual_dollars": 23700.0,
+      "predicted_dollars": 24627.32,
+      "residual": -0.93,
+      "abs_error": 0.93
+    },
+    {
+      "id": 73,
+      "actual": 10.8,
+      "predicted": 10.41,
+      "actual_dollars": 10800.0,
+      "predicted_dollars": 10414.73,
+      "residual": 0.39,
+      "abs_error": 0.39
+    },
+    {
+      "id": 74,
+      "actual": 20.6,
+      "predicted": 21.95,
+      "actual_dollars": 20600.0,
+      "predicted_dollars": 21946.79,
+      "residual": -1.35,
+      "abs_error": 1.35
+    },
+    {
+      "id": 75,
+      "actual": 20.8,
+      "predicted": 23.0,
+      "actual_dollars": 20800.0,
+      "predicted_dollars": 23003.93,
+      "residual": -2.2,
+      "abs_error": 2.2
+    },
+    {
+      "id": 76,
+      "actual": 5.0,
+      "predicted": 6.68,
+      "actual_dollars": 5000.0,
+      "predicted_dollars": 6681.4,
+      "residual": -1.68,
+      "abs_error": 1.68
+    },
+    {
+      "id": 77,
+      "actual": 20.1,
+      "predicted": 20.6,
+      "actual_dollars": 20100.0,
+      "predicted_dollars": 20597.48,
+      "residual": -0.5,
+      "abs_error": 0.5
+    },
+    {
+      "id": 78,
+      "actual": 48.5,
+      "predicted": 45.32,
+      "actual_dollars": 48500.0,
+      "predicted_dollars": 45318.58,
+      "residual": 3.18,
+      "abs_error": 3.18
+    },
+    {
+      "id": 79,
+      "actual": 10.9,
+      "predicted": 11.92,
+      "actual_dollars": 10900.0,
+      "predicted_dollars": 11924.14,
+      "residual": -1.02,
+      "abs_error": 1.02
+    },
+    {
+      "id": 80,
+      "actual": 7.0,
+      "predicted": 12.3,
+      "actual_dollars": 7000.0,
+      "predicted_dollars": 12304.05,
+      "residual": -5.3,
+      "abs_error": 5.3
+    },
+    {
+      "id": 81,
+      "actual": 20.9,
+      "predicted": 21.73,
+      "actual_dollars": 20900.0,
+      "predicted_dollars": 21725.67,
+      "residual": -0.83,
+      "abs_error": 0.83
+    },
+    {
+      "id": 82,
+      "actual": 17.2,
+      "predicted": 12.69,
+      "actual_dollars": 17200.0,
+      "predicted_dollars": 12692.08,
+      "residual": 4.51,
+      "abs_error": 4.51
+    },
+    {
+      "id": 83,
+      "actual": 20.9,
+      "predicted": 19.11,
+      "actual_dollars": 20900.0,
+      "predicted_dollars": 19114.23,
+      "residual": 1.79,
+      "abs_error": 1.79
+    },
+    {
+      "id": 84,
+      "actual": 9.7,
+      "predicted": 8.94,
+      "actual_dollars": 9700.0,
+      "predicted_dollars": 8938.37,
+      "residual": 0.76,
+      "abs_error": 0.76
+    },
+    {
+      "id": 85,
+      "actual": 19.4,
+      "predicted": 19.91,
+      "actual_dollars": 19400.0,
+      "predicted_dollars": 19910.35,
+      "residual": -0.51,
+      "abs_error": 0.51
+    },
+    {
+      "id": 86,
+      "actual": 29.0,
+      "predicted": 27.23,
+      "actual_dollars": 29000.0,
+      "predicted_dollars": 27227.41,
+      "residual": 1.77,
+      "abs_error": 1.77
+    },
+    {
+      "id": 87,
+      "actual": 16.4,
+      "predicted": 15.69,
+      "actual_dollars": 16400.0,
+      "predicted_dollars": 15690.97,
+      "residual": 0.71,
+      "abs_error": 0.71
+    },
+    {
+      "id": 88,
+      "actual": 25.0,
+      "predicted": 23.48,
+      "actual_dollars": 25000.0,
+      "predicted_dollars": 23479.81,
+      "residual": 1.52,
+      "abs_error": 1.52
+    },
+    {
+      "id": 89,
+      "actual": 25.0,
+      "predicted": 25.03,
+      "actual_dollars": 25000.0,
+      "predicted_dollars": 25026.64,
+      "residual": -0.03,
+      "abs_error": 0.03
+    },
+    {
+      "id": 90,
+      "actual": 17.1,
+      "predicted": 17.54,
+      "actual_dollars": 17100.0,
+      "predicted_dollars": 17540.5,
+      "residual": -0.44,
+      "abs_error": 0.44
+    },
+    {
+      "id": 91,
+      "actual": 23.2,
+      "predicted": 22.51,
+      "actual_dollars": 23200.0,
+      "predicted_dollars": 22505.56,
+      "residual": 0.69,
+      "abs_error": 0.69
+    },
+    {
+      "id": 92,
+      "actual": 10.4,
+      "predicted": 9.73,
+      "actual_dollars": 10400.0,
+      "predicted_dollars": 9730.19,
+      "residual": 0.67,
+      "abs_error": 0.67
+    },
+    {
+      "id": 93,
+      "actual": 19.6,
+      "predicted": 18.87,
+      "actual_dollars": 19600.0,
+      "predicted_dollars": 18871.14,
+      "residual": 0.73,
+      "abs_error": 0.73
+    },
+    {
+      "id": 94,
+      "actual": 17.2,
+      "predicted": 18.52,
+      "actual_dollars": 17200.0,
+      "predicted_dollars": 18524.65,
+      "residual": -1.32,
+      "abs_error": 1.32
+    },
+    {
+      "id": 95,
+      "actual": 27.5,
+      "predicted": 23.31,
+      "actual_dollars": 27500.0,
+      "predicted_dollars": 23307.75,
+      "residual": 4.19,
+      "abs_error": 4.19
+    },
+    {
+      "id": 96,
+      "actual": 23.0,
+      "predicted": 19.19,
+      "actual_dollars": 23000.0,
+      "predicted_dollars": 19192.72,
+      "residual": 3.81,
+      "abs_error": 3.81
+    },
+    {
+      "id": 97,
+      "actual": 50.0,
+      "predicted": 46.11,
+      "actual_dollars": 50000.0,
+      "predicted_dollars": 46114.32,
+      "residual": 3.89,
+      "abs_error": 3.89
+    },
+    {
+      "id": 98,
+      "actual": 17.9,
+      "predicted": 11.04,
+      "actual_dollars": 17900.0,
+      "predicted_dollars": 11044.74,
+      "residual": 6.86,
+      "abs_error": 6.86
+    },
+    {
+      "id": 99,
+      "actual": 9.6,
+      "predicted": 12.14,
+      "actual_dollars": 9600.0,
+      "predicted_dollars": 12136.05,
+      "residual": -2.54,
+      "abs_error": 2.54
+    },
+    {
+      "id": 100,
+      "actual": 17.2,
+      "predicted": 13.3,
+      "actual_dollars": 17200.0,
+      "predicted_dollars": 13302.15,
+      "residual": 3.9,
+      "abs_error": 3.9
+    },
+    {
+      "id": 101,
+      "actual": 22.5,
+      "predicted": 20.33,
+      "actual_dollars": 22500.0,
+      "predicted_dollars": 20326.35,
+      "residual": 2.17,
+      "abs_error": 2.17
+    },
+    {
+      "id": 102,
+      "actual": 21.4,
+      "predicted": 23.57,
+      "actual_dollars": 21400.0,
+      "predicted_dollars": 23568.01,
+      "residual": -2.17,
+      "abs_error": 2.17
+    }
+  ],
+  "training_config": {
+    "test_split_ratio": 0.2,
+    "random_state": 42,
+    "evaluation_criterion": "Highest R\u00b2 score on held-out test set"
+  },
+  "ethical_disclaimer": "The Boston Housing dataset is an educational machine learning benchmark containing 1970s historical census metrics. It includes socioeconomic variables and has documented fairness concerns. Predictions are educational estimates and should not be used as appraisals for modern real estate transactions."
+}
